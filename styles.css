@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,100;1,200;1,300;1,500&display=swap');
+
+
+*{
+
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+--prim-transition:all 200ms ease-in;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #d05757;
+    scroll-behavior: smooth;
+}
+/* ------------------------------------------start loader-------------------------------------------- */
+#loader{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    border-radius: 10%;
+    background-color: #00000096;
+}
+.ball-scale>div {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    -webkit-animation: ball-scale 1s 0s ease-in-out infinite;
+    animation: ball-scale 1s 0s ease-in-out infinite;
+  }
+  
+  @keyframes ball-scale {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+
+/* ------------------------------------------end loader-------------------------------------------- */
+
+
+/* -----------------------------------------------start navbar------------------------------------------------ */
+
+
+.navbar {
+    z-index: 10;
+    
+}
+.navbar .search-bar{
+    background-color: #bbbbbbbd;
+}
+.navbar .search-bar input[type ="search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    color: black;
+   
+}
+.navbar .search-bar input[type ="search"]::placeholder{
+    color: #000;
+    opacity: 0.5;
+}
+
+
+.navbar .user-validity .icon{
+    cursor: pointer;
+    transition: var(--prim-transition);
+}
+.navbar .user-validity .icon:hover{
+transform: scale(1.1)
+}
+
+/* -----------------------------------------------end navbar------------------------------------------------ */
+
+
+/* ----------------------------------start main section----------------------------------------- */
+
+main{
+    position: relative;
+    top: 3rem;
+}
+
+main .container .left-side{
+    padding: 0.5rem;
+
+}
+main .container .my-profile{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+main .container .left-side .user-setting .menu-item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--prim-transition);
+}
+main .container .left-side .user-setting .menu-item .icon{
+    font-size: 1.5rem;
+    color: #0d6efd;
+}
+main .container .left-side .user-setting .menu-item h5{
+    color: #000000bf;
+}
+main .container .left-side .user-setting .menu-item.active{
+    background-color: #bbb;
+    border-radius: 5px;
+} 
+main .container .left-side .user-setting .menu-item:hover{
+    background-color: #bbb;
+    border-radius: 5px;
+}
+
+main .container .left .user-setting .menu-item.active{
+    background-color: #bbb;
+    border-radius: 10px;
+} 
+
+
+/* ---------------------------------------------------------------------btn to back to index.html------------------------- */
+
+.back-home{
+    transition: var(--prim-transition);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.back-home:hover{
+    opacity: 0.6;
+    }
+/* ----------------------------------------------------------------start main section in postdetails.html--------------------- */
+.main-section{
+    position: relative;
+    padding: 0.5rem;
+}
+
+
+
+/* ---------------------------------start customize alert----------------------------------------------- */
+.showAlert{
+    position: fixed;
+    z-index: 999;
+    top: 4rem;
+    right: 2rem;
+    width: 50%;
+}
+
+
+/* --------------------------------------------------userProfile------------------------------------- */
+/* -----------------------------------btn for back to index page---------------------------------- */
